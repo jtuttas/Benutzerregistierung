@@ -1,0 +1,21 @@
+{
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [],
+
+    "files.exclude": {
+        "**/.git": true,         // this is a default value
+
+        "**/node_modules": true, // this excludes all folders 
+                                 // named "node_modules" from 
+                                 // the explore tree
+
+    },
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "client_secret": "omWXNDF12@)jrjutTR682?%",
+            "client_id": "85081bd8-fafc-4907-a8f0-b0625cb3b330",
+            "token":"eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFEWDhHQ2k2SnM2U0s4MlRzRDJQYjdybVZqM3NvV1l0dE9TU2MtQ1d5aE96ZWFCTTkyTXRNM0thRnp5UzhwNjNnMFlOS3FhX2hoNDBVcy1XazQ2OVdYeC1QM0h6UVdxdmxmeVB4V1NvM3BVdFNBQSIsImFsZyI6IlJTMjU2IiwieDV0IjoiVGlvR3l3d2xodmRGYlhaODEzV3BQYXk5QWxVIiwia2lkIjoiVGlvR3l3d2xodmRGYlhaODEzV3BQYXk5QWxVIn0.eyJhdWQiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC83ZWYzMjRlYy04ZWYwLTQ1ZmUtYWM5NC1jODM5NzFlZjQ1ZjgvIiwiaWF0IjoxNTMxMzA3MTY4LCJuYmYiOjE1MzEzMDcxNjgsImV4cCI6MTUzMTMxMTA2OCwiYWNjdCI6MCwiYWNyIjoiMSIsImFpbyI6IkFTUUEyLzhIQUFBQUx0RGo2S1NEOVlQcktiVnVnc3VBS1h2bFJhdmVPdVZpa2tHUlVFVm9HYTQ9IiwiYW1yIjpbInB3ZCJdLCJhcHBfZGlzcGxheW5hbWUiOiJ0ZXN0QXBwIiwiYXBwaWQiOiI4NTA4MWJkOC1mYWZjLTQ5MDctYThmMC1iMDYyNWNiM2IzMzAiLCJhcHBpZGFjciI6IjEiLCJmYW1pbHlfbmFtZSI6IlR1dHRhcyIsImdpdmVuX25hbWUiOiJKb2VyZyIsImlwYWRkciI6Ijg0LjE2NS42My45NyIsIm5hbWUiOiJKb2VyZyBUdXR0YXMiLCJvaWQiOiIzNjc1NmU3My1jNzZlLTRlOTYtODA5ZS00YmRiZDk4NjM3OGIiLCJvbnByZW1fc2lkIjoiUy0xLTUtMjEtNDI4OTI1Njk3OC00MDM4MDExODAxLTExNjQ1NDg1ODItNzE3MCIsInBsYXRmIjoiMyIsInB1aWQiOiIxMDAzN0ZGRTlGOTA1NjQ2Iiwic2NwIjoiRmlsZXMuUmVhZFdyaXRlLkFsbCBNYWlsLlJlYWQgVXNlci5SZWFkIiwic2lnbmluX3N0YXRlIjpbImttc2kiXSwic3ViIjoiSlBKeG1HaGY5SDNpZEd3cGJnc2FlV3JxQVdJVzAtOE9aN1VjNURNUmxUSSIsInRpZCI6IjdlZjMyNGVjLThlZjAtNDVmZS1hYzk0LWM4Mzk3MWVmNDVmOCIsInVuaXF1ZV9uYW1lIjoidHV0dGFzQG1tYmJzLmRlIiwidXBuIjoidHV0dGFzQG1tYmJzLmRlIiwidXRpIjoiVXh4RUctSk5fRUNZVWlHZjUzZzFBQSIsInZlciI6IjEuMCJ9.ntbNBIOCzj1qhq6ZJUYMUV2cCcDT7JO3zdYDFQqqcgxZ7evOqDC3LRr4JErjRfEhQc5lYwFfxfQQQj7wYdnSs0UXq6MCloFHApRLvJ7EcZHzPiNF_UGXswm4MvJqPSQaULvECSBDjoPln9hGhIGlzAXbHX8Hy6rsayRqt905dZISng1enGaDKLZT9kA3Pae-NXdINJRXJNVhy3ux_GTHbgJBcb-c64atRp0oaKfA5fcHUCK39hA5YMo5a8Jw1N3gzhT9XAv8B5TdjXXz1HT5Bj39v3Z7vtGhU2T-CxsKRd1VungJDhiH778Uh5zhjXvO0Y0WoEM4stfdXF3QZKtMJw",
+            "refesh-token":"OAQABAAAAAADX8GCi6Js6SK82TsD2Pb7rrJvIiaHXUJ-qIJQ9cme_CUSXdHtYk1bgzMfcgsFqPipa3zs7BMM3BKdUvuEaf9PDJZtFK86bszv0Nov1VH-EW2zKyiUpNgZEkcfE4WGVwh82CIs1fSJ_hXQIXQdNlRNzfB7fGtALlpSJmqren8CeyEMVGYr6r3qLzt7K_hgnXg5H6AsUrmCyVsBJ-dSiMyq0JCdI_hP7t63l6th9RksMUZCG13SHPj1N_tObJ0KOs7rG1fnNu1clZGTkk8pZIVpBC9D-vKllGf-biLp7MC5DTApnkRJaDNJ3Sb-XRyvYW34oUOmX4RD3ikS2YSeWU2zSPaG9uJx3iDBa270SFZMdTOVlC-zONsc43gjfQrPamr36wzuF5hpTsaAXQRXfZyeeMk_Da5SzNLLDFJug_f-GCWa6BWpM2vIuuyfIUvG7igsYUkUMEPooWkTr0o8AHD8n1PeSF7M2tek-WP6rwuK4iEcnvEW3n-tT44Tm9NqCYPqpIoUOh8izotrlNMOYROEKpV9cvyMTEucQ1D1XVbVMb1GclzvJegCrG44u9VMPB5OA7oSUxPL2NSN9XRt_XI5axuCd9ZQvu7pcl18k8fBGkg9hBtiq6W63UsFit8VAl5p9_jLYz8nUl7T5MvsM7e7gZ5qy4Igcz1isUJz5GggYD_lGx5fd2GPVnmB2YtnlhVyqI1ifiiQSwaUK7JndS7Fq1v02WNci1zVVJ-bV-lU1ZX9jlwkao9M42RW2HwNfJUaL5_RP57-6vvpQ8vXu6vzqHSi8069vj1fuWF_OCvgbmZJeSB-adtUlHk9qzpn6AIMgAA"
+        },
+      }
+}

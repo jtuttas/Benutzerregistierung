@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benutzerregistriegung</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="config.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Benutzerregistrierung Schritt 1/2</h1>
+    </div>
+    <div class="row hidden" id="result">
+        <div class="col-md-12">
+            <h1 id="resultMsg"></h1>
+        </div>
+    </div>
+
+    <div id="theform">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Hier stehen ganz viel zum Thema Datenschutz!Hier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel
+                    zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier
+                    stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel
+                    zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier
+                    stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel
+                    zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier
+                    stehen ganz viel zum Thema DatenschutzHier stehen ganz viel zum Thema DatenschutzHier stehen ganz viel
+                    zum Thema Datenschutz</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+
+            <div class="col-md-12">
+                <div>
+                    <p class="error hidden" id="nomail">Bitte geben Sie eine EMail Adresse an!"</p>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div>
+                    <p class="error hidden" id="notchecked">Bitte akzeptieren Sie die Datenschutzerklärung!"</p>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Akzeptieren</label>
+                </div>
+
+                <button id="s1" type="button" class="btn btn-primary">OK</button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#s1").click(function (e) {
+            if ($("#exampleInputEmail1").val() == "") {
+                $("#nomail").removeClass("hidden");
+            }
+            else {
+                $("#nomail").addClass("hidden");
+            }
+            if (!$("#exampleCheck1").is(':checked')) {
+                $("#notchecked").removeClass("hidden");
+            }
+            else {
+                $("#notchecked").addClass("hidden");
+            }
+            if ($("#exampleInputEmail1").val() != "" && $("#exampleCheck1").is(':checked')) {
+                obj = {
+                    email: $("#exampleInputEmail1").val()
+                }
+                console.log('post:' + JSON.stringify(obj));
+                $.ajax({
+                    url: 'http://'+server+':'+port+'/api/v1/',
+                    type: 'post',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: function (data) {
+                        console.log('data=' + JSON.stringify(data));
+                        $("#theform").addClass("hidden");
+                        $("#result").removeClass("hidden");
+                        $("#resultMsg").text(data.msg);
+                    },
+                    data: JSON.stringify(obj)
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
