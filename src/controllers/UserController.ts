@@ -44,6 +44,7 @@ export let getUser = (req: Request, res: Response) => {
 
 export let setUser = (req: Request, res: Response) => {
   console.log("Post with Data!: " + JSON.stringify(req.body));
+ 
   const uuidv4 = require('uuid/v4');
   var uuid = uuidv4(); // ⇨ '10ba038e-48da-487b-96e8-8d3b99b6d18a'
   console.log("uuid=" + uuid);
@@ -53,7 +54,7 @@ export let setUser = (req: Request, res: Response) => {
   let v: Result = new Result();
   v.success = true;
   v.msg = "EMail send to " + req.body.email;
-  let m: Mailer = new Mailer();
+  let m: Mailer = new Mailer(req.protocol+"://"+ req.get('host'));
   m.sendMail(req.body.email, uuid);
   res.contentType('application/json');
   res.send(JSON.stringify(v));

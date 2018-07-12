@@ -32,13 +32,14 @@ export class ExcelTool {
                 form: JSON.stringify(obj),
             }, (error, response, body) => {
                 console.log("add User status code:" + response.statusCode);
-                if (error || response.statusCode==401) {
+                if (error || response.statusCode == 401) {
                     this.signin.updateToken(
                         token => {
                             counter--;
                             this.addUser(u, counter);
                         },
                         error => {
+                            console.log("error:" + error);
 
                         }
                     );

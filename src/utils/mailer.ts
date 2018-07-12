@@ -2,6 +2,13 @@ import * as nodemailer from 'nodemailer';
 import { secrets } from '../app';
 
 export class Mailer {
+    private server:string;
+
+    constructor(server:string) {
+        console.log("Set Server to "+server);
+        
+        this.server=server;
+    }
 
     transporter = nodemailer.createTransport({
         host: secrets.smtp_server,
@@ -26,7 +33,7 @@ export class Mailer {
         
         this.mailOptions.to=to;
         
-        this.mailOptions.html= this.mailOptions.html.replace("[[link]]","http://service.joerg-tuttas.de/agb/index2.html?uuid="+uuid);
+        this.mailOptions.html= this.mailOptions.html.replace("[[link]]",this.server+"/web/index2.html?uuid="+uuid);
         // send mail with defined transport object
         this.transporter.sendMail(this.mailOptions, (error, info) => {
             if (error) {

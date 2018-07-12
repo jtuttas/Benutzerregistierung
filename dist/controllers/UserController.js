@@ -49,7 +49,7 @@ exports.setUser = function (req, res) {
     var v = new result_1.Result();
     v.success = true;
     v.msg = "EMail send to " + req.body.email;
-    var m = new mailer_1.Mailer();
+    var m = new mailer_1.Mailer(req.protocol + "://" + req.get('host'));
     m.sendMail(req.body.email, uuid);
     res.contentType('application/json');
     res.send(JSON.stringify(v));

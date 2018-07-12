@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var nodemailer = require("nodemailer");
 var app_1 = require("../app");
 var Mailer = /** @class */ (function () {
-    function Mailer() {
+    function Mailer(server) {
         this.transporter = nodemailer.createTransport({
             host: app_1.secrets.smtp_server,
             port: app_1.secrets.smtp_port,
@@ -20,11 +20,13 @@ var Mailer = /** @class */ (function () {
             subject: 'Your Registration',
             html: '<b>Bitte bestätigen Sie ihre EMail indem Sie auf diesen <a href="[[link]]">Link</a> klicken!</b>' // html body
         };
+        console.log("Set Server to " + server);
+        this.server = server;
     }
     Mailer.prototype.sendMail = function (to, uuid) {
         console.log("Start mail transfer...");
         this.mailOptions.to = to;
-        this.mailOptions.html = this.mailOptions.html.replace("[[link]]", "http://service.joerg-tuttas.de/agb/index2.html?uuid=" + uuid);
+        this.mailOptions.html = this.mailOptions.html.replace("[[link]]", this.server + "/web/index2.html?uuid=" + uuid);
         // send mail with defined transport object
         this.transporter.sendMail(this.mailOptions, function (error, info) {
             if (error) {

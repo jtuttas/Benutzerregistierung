@@ -3,10 +3,12 @@ import * as MicrosoftGraph from "@microsoft/microsoft-graph-types"
 import { GraphSignin } from './controllers/GraphSignin';
 import { Client as GraphClient } from "@microsoft/microsoft-graph-client";
 
+
 /**
  * Controllers (route handlers).
  */
 import * as userController from "./controllers/UserController";
+import * as webController from "./controllers/webController";
 import { ExcelTool } from './controllers/ExcelTool';
 import { User } from './models/user';
 
@@ -93,9 +95,12 @@ app.set("port", process.env.PORT || 3001);
 /**
  * Start Express server.
  */
-app.listen(app.get("port"), () => {
+
+var server=app.listen(app.get("port"),, () => {
     console.log(("  App is running at http://localhost:%d in %s mode"), app.get("port"), app.get("env"));
     console.log("  Press CTRL-C to stop\n");
+  
+    
 });
 
 /**
@@ -103,8 +108,7 @@ app.listen(app.get("port"), () => {
  */
 app.get("/api/v1/", userController.getUser);
 app.post("/api/v1/", userController.setUser);
-
-// Azure Test
+app.get("/web/*",webController.getFile);
 
 
 module.exports = app;

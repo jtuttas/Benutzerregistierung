@@ -2,4 +2,6 @@ node_modules/*
 secrets.json
 rest.http
 users.db
+./vscode/settings.json
+
 

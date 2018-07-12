@@ -31,6 +31,7 @@ var ExcelTool = /** @class */ (function () {
                         counter--;
                         _this.addUser(u, counter);
                     }, function (error) {
+                        console.log("error:" + error);
                     });
                 }
             });
