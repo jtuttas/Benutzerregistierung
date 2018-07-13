@@ -10,7 +10,7 @@ npm install
 ```
 
 ## Konfiguration 
-Die Konfiguratione findet über die das *secrets.json* statt. Diese Datei muss im /config Verzeichnis zu finden sein und hat folgendes aussehen.
+Die Konfiguration findet über die Datei *secrets.json* statt. Diese Datei muss im /config Verzeichnis zu finden sein und hat folgendes aussehen.
 ```json
 {
     "accessToken":"access Token f. Office 365 (kann leer bleiben)",
@@ -33,7 +33,7 @@ Sind die Daten in der Datei *secrets.json* eingetragen kann der Server gestartet
 node dist/app.js
 ```
 
-Anschließend kann der Server über folgende UTR aufgerufen werden *http://localhost:3001/web/*
+Anschließend kann der Server über folgende URL aufgerufen werden *http://localhost:3001/web/* und es sollte folgende Seite erscheinen.
 
 ![Welcome Seite](screen1.PNG)
 
