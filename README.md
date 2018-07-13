@@ -10,7 +10,7 @@ npm install
 ```
 
 ## Konfiguration 
-Die Konfiguratione findet über die das *secrets.json* statt. Diese Datei musss um root Verzeichnis zu finden sein und hat folgendes aussehen.
+Die Konfiguratione findet über die das *secrets.json* statt. Diese Datei muss im /config Verzeichnis zu finden sein und hat folgendes aussehen.
 ```json
 {
     "accessToken":"access Token f. Office 365 (kann leer bleiben)",
@@ -36,3 +36,11 @@ node dist/app.js
 Anschließend kann der Server über folgende UTR aufgerufen werden *http://localhost:3001/web/*
 
 ![Welcome Seite](screen1.PNG)
+
+## Docker Container
+Die Anwendung existiert auch als Docker Container, um diesen zu starten folgenden Befehl ausführen:
+```
+docker run --rm -v c:/Temp/config:/usr/src/app/config -it -p 3001:3001 tuttas/benutzerregistierung:latest
+```
+
+Dabei muss im geteilten Verzeichnis *config* sich die Datei *secrets.json* befinden (im oberen Biespiel also unter c:/Temp/config).

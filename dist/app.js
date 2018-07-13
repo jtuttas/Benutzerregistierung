@@ -26,7 +26,7 @@ exports.db.serialize(function () {
 /**
  * Azure
  */
-exports.secrets = require("../secrets");
+exports.secrets = require("../config/secrets");
 // production apps should import from "@microsoft/microsoft-graph-client"; to grab the NPM module with the types declarations
 // These are the types for graph nodes that are published separetlely (User field types, messages, contacts, etc.)
 // To reference Microsoft Graph types, see directions at https://github.com/microsoftgraph/msgraph-typescript-typings/

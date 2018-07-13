@@ -1,4 +1,4 @@
 node_modules/*
-secrets.json
+config/secrets.json
 users.db
 .vscode/settings.json

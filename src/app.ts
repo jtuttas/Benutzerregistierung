@@ -31,7 +31,7 @@ db.serialize(function () {
  * Azure
  */
 
-export const secrets = require("../secrets");
+export const secrets = require("../config/secrets");
 
 // production apps should import from "@microsoft/microsoft-graph-client"; to grab the NPM module with the types declarations
 
