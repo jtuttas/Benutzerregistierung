@@ -20,7 +20,7 @@ Die Konfiguration findet über die Datei *secrets.json* statt. Diese Datei muss 
     "item_id": "ID der Office 365 Excel Arbeitsmappe",
     "table_id": "id der Tabelle in der Arbeitsmappe",
 
-    "smtp_server":"Adresse des SMPT Servers",
+    "smtp_server":"Adresse des SMTP Servers",
     "smtp_port": 587,
     "smtp_user": "SMTP Benutzername",
     "smtp_password":"STMP Kennwort"

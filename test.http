@@ -9,3 +9,18 @@ Content-Type: application/json
 {
     "email": "tuttas2@mmbbs.de"
 }
+
+### Akzeptieren einer UUID
+GET https://userreg.azurewebsites.net/api/v1/:443?UUID=abcd HTTP/1.1
+
+### Anfrage eines neuen Benutzer, d.h. EMail wird eingetragen in DB
+# und UID generiert und EMail versendet an Benutzer
+POST https://userreg.azurewebsites.net/api/v1/:443 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "tuttas2@mmbbs.de"
+}
+
+### Akzeptieren einer UUID
+GET https://userreg.azurewebsites.net/web/index3.html HTTP/1.1
