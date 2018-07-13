@@ -43,4 +43,4 @@ Die Anwendung existiert auch als Docker Container, um diesen zu starten folgende
 docker run --rm -v c:/Temp/config:/usr/src/app/config -it -p 3001:3001 tuttas/benutzerregistierung:latest
 ```
 
-Dabei muss im geteilten Verzeichnis *config* sich die Datei *secrets.json* befinden (im oberen Biespiel also unter c:/Temp/config).
+Dabei muss im geteilten Verzeichnis *config* sich die Datei *secrets.json* befinden (im oberen Beispiel also unter c:/Temp/config).
