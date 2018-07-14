@@ -109,6 +109,6 @@ var server=app.listen(app.get("port"), () => {
 app.get("/api/v1/", userController.getUser);
 app.post("/api/v1/", userController.setUser);
 app.get("/web/*",webController.getFile);
-
+app.get("/test/api/v1/*", userController.getUser);
 
 module.exports = app;
