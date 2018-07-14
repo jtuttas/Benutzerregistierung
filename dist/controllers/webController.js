@@ -12,8 +12,6 @@ exports.getFile = function (req, res) {
     console.log("File=" + file);
     res.contentType('text/html');
     fs.readFile("../web/" + file, function (err, data) {
-        console.log("read bytes:" + data.length);
-        console.log("err:" + JSON.stringify(err));
         if (err) {
             res.statusCode = 404;
             res.send("File " + file + " not found!");

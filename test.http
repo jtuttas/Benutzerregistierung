@@ -22,5 +22,3 @@ Content-Type: application/json
     "email": "tuttas2@mmbbs.de"
 }
 
-### Akzeptieren einer UUID
-GET https://userreg.azurewebsites.net/web/index3.html HTTP/1.1
