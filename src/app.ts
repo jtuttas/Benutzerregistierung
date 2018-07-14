@@ -107,8 +107,8 @@ var server=app.listen(app.get("port"), () => {
 /**
  * Primary app routes.
  */
-app.get("/api/v1/", userController.getUser);
-app.post("/api/v1/", userController.setUser);
+//app.get("/api/v1/", userController.getUser);
+//app.post("/api/v1/", userController.setUser);
 app.get("/web/*",webController.getFile);
 router.get('/things', function(req, res) {
     res.json('GET route on things.');

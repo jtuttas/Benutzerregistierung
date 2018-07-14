@@ -3,10 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var GraphSignin_1 = require("./controllers/GraphSignin");
 var microsoft_graph_client_1 = require("@microsoft/microsoft-graph-client");
-/**
- * Controllers (route handlers).
- */
-var userController = require("./controllers/UserController");
 var webController = require("./controllers/webController");
 var ExcelTool_1 = require("./controllers/ExcelTool");
 /**
@@ -86,8 +82,8 @@ var server = app.listen(app.get("port"), function () {
 /**
  * Primary app routes.
  */
-app.get("/api/v1/", userController.getUser);
-app.post("/api/v1/", userController.setUser);
+//app.get("/api/v1/", userController.getUser);
+//app.post("/api/v1/", userController.setUser);
 app.get("/web/*", webController.getFile);
 router.get('/things', function (req, res) {
     res.json('GET route on things.');
