@@ -79,7 +79,7 @@ var allowCrossDomain = function (req: any, res: any, next: any) {
     next();
 }
 const app = express();
-var router = express.Router();
+//var router = express.Router();
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -97,21 +97,18 @@ app.set("port", process.env.PORT || 3001);
  * Start Express server.
  */
 
-var server=app.listen(app.get("port"), () => {
+
+
+app.route('/api/v1/')
+    .get(userController.getUser)
+    .post(userController.setUser)
+app.get("/web/*",webController.getFile);
+
+app.listen(app.get("port"), () => {
     console.log(("  App is running at http://localhost:%d in %s mode"), app.get("port"), app.get("env"));
     console.log("  Press CTRL-C to stop\n");
   
     
 });
-
-/**
- * Primary app routes.
- */
-//app.get("/api/v1/", userController.getUser);
-//app.post("/api/v1/", userController.setUser);
-router.get('/things', function(req, res) {
-    res.json('GET route on things.');
-});
-app.get("/web/*",webController.getFile);
 
 module.exports = app;
