@@ -63,6 +63,7 @@ var allowCrossDomain = function (req, res, next) {
     next();
 };
 var app = express();
+var router = express.Router();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({
@@ -88,6 +89,8 @@ var server = app.listen(app.get("port"), function () {
 app.get("/api/v1/", userController.getUser);
 app.post("/api/v1/", userController.setUser);
 app.get("/web/*", webController.getFile);
-app.get("/test/api/v1/*", userController.getUser);
+router.get('/things', function (req, res) {
+    res.json('GET route on things.');
+});
 module.exports = app;
 //# sourceMappingURL=app.js.map
