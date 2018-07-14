@@ -84,9 +84,9 @@ var server = app.listen(app.get("port"), function () {
  */
 //app.get("/api/v1/", userController.getUser);
 //app.post("/api/v1/", userController.setUser);
-app.get("/web/*", webController.getFile);
 router.get('/things', function (req, res) {
     res.json('GET route on things.');
 });
+app.get("/web/*", webController.getFile);
 module.exports = app;
 //# sourceMappingURL=app.js.map
